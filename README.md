@@ -64,7 +64,7 @@ More feautures coming soon...
     
  
 <br>
-## Changelog
+<h3>Changelog</h3>
 
 🆅<b>0.7</b>
 
