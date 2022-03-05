@@ -68,9 +68,9 @@ More feautures coming soon...
 
 🆅<b>0.7</b>
 
- -Added InlineKeyboardButtons
- -Added ReplyKeyboardButtons
- -Optimizations and minor bug fixes
+ - Added InlineKeyboardButtons
+ - Added ReplyKeyboardButtons
+ - Optimizations and minor bug fixes
 
 🆅<b>0.6</b>
 
