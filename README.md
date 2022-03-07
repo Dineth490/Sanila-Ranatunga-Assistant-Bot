@@ -66,30 +66,35 @@ More feautures coming soon...
 <br>
 <h3>Changelog</h3>
 
-🆅<b>0.7</b>
 
- - Added InlineKeyboardButtons
- - Added ReplyKeyboardButtons
- - Optimizations and minor bug fixes
 
-🆅<b>0.6</b>
 
- - Fixed errors in v0.5
- - Changed the welcome msg
- - Optimizations and bug fixes 
+
+
+
  
-🆅<b>0.5</b>
+
  
- - Bug fixes and optimizations
+
  
 🆅<b>0.4</b>
 
- - Changed the interface
- - Minor bug fixes
+ - Added InlineKeyboardButtons
+
+ - Added ReplyKeyboardButtons
+
+ - Optimizations and minor bug fixes
+
  
 🆅<B>0.3</b>
 
- - Added time (US Time)
+ - Fixed errors in v0.2
+
+ - Changed the welcome msg
+
+ - Optimizations and bug fixes 
+
+ 
  
 🆅<b>0.2</b>
 
