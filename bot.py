@@ -41,7 +41,7 @@ def command(bot, message):
     )
 
 
-REPLY_MESSAGE = "✍️Hello \n\n🌺You Can Contact Sanila Using This BOT 💁‍♂\n========================\n\n- ғeel ғree тo reporт вυɢѕ 🐞.\n- ѕυɢɢeѕтιoɴѕ αre welcoмe 🐣.\n- coɴтαcт αɴy вoт proвleм 🐍.\n αѕĸ αɴy qυeѕтιoɴѕ 🦑.\n\n========================\n\nCheck my projects using (Github)[https://t.me/sanilaranatunga]\n",parse_mode="markdown")
+REPLY_MESSAGE = "✍️Hello \n\n🌺You Can Contact Sanila Using This BOT 💁‍♂\n========================\n\n- ғeel ғree тo reporт вυɢѕ 🐞.\n- ѕυɢɢeѕтιoɴѕ αre welcoмe 🐣.\n- coɴтαcт αɴy вoт proвleм 🐍.\n αѕĸ αɴy qυeѕтιoɴѕ 🦑.\n\n========================\n\n"
 
 REPLY_BUTTONS = [
     [
