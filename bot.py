@@ -35,7 +35,6 @@ def command(bot, message):
     text = START_MESSAGE
     reply_markup = InlineKeyboardMarkup(START_MESSAGE_BUTTONS)
     message.reply(
-        sticker=sticker
         text=text,
         reply_markup=reply_markup,
         disable_web_page_preview=True
