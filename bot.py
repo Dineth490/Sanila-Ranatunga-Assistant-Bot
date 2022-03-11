@@ -2,12 +2,9 @@ import os
 import pyrogram
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup
+from config import Config
 
-
-bot = Client("bot",
-             api_id=7263889,
-             api_hash="89c452ed35062d2d31922e6d8d069c90",
-             bot_token="2061542733:AAHQygSAwGCppBx_LJIsEA7pPF8QAv2UM0k")
+bot = Client("bot", api_id=Config.API_ID, api_hash=Config.API_HASH, bot_token=Config.BOT_TOKEN)
 
 STICKER_MESSAGE = "https://telegra.ph/file/0a7f2e9ffab72fcc400f8.png"
 
@@ -30,19 +27,19 @@ START_MESSAGE_BUTTONS = [
 
 
 @bot.on_message(filters.command("start") & filters.private)
-def start(bot, message):
+def command(bot, message):
     sticker = STICKER_MESSAGE
     text = START_MESSAGE
     reply_markup = InlineKeyboardMarkup(START_MESSAGE_BUTTONS)
     message.reply(
-        sticker=sticker,
+        sticker=sticker
         text=text,
         reply_markup=reply_markup,
         disable_web_page_preview=True
     )
 
 
-REPLY_MESSAGE = "✍️Hello \n\n🌺You Can Contact Sanila Using This BOT 💁‍♂\n========================\n\n- ғeel ғree тo reporт вυɢѕ 🐞.\n- ѕυɢɢeѕтιoɴѕ αre welcoмe 🐣.\n- coɴтαcт αɴy вoт proвleм 🐍.\n αѕĸ αɴy qυeѕтιoɴѕ 🦑.\n\n========================\n\n"
+REPLY_MESSAGE = "✍️Hello \n\n🌺You Can Contact Sanila Using This BOT 💁‍♂\n========================\n\n- ғeel ғree тo reporт вυɢѕ 🐞.\n- ѕυɢɢeѕтιoɴѕ αre welcoмe 🐣.\n- coɴтαcт αɴy вoт proвleм 🐍.\n αѕĸ αɴy qυeѕтιoɴѕ 🦑.\n\n========================\n\nCheck my projects using (Github)[https://t.me/sanilaranatunga]\n",parse_mode="markdown")
 
 REPLY_BUTTONS = [
     [
@@ -65,8 +62,7 @@ def greet(bot, message):
     reply_markup = ReplyKeyboardMarkup(REPLY_BUTTONS, one_time_keyboard=True, resize_keyboard=True)
     message.reply(
         text=text,
-        reply_markup=reply_markup,
-        disable_web_page_preview=True
+        reply_markup=reply_markup
 
     )
 
@@ -79,21 +75,21 @@ def reply_to_About(bot, message):
 
 @bot.on_message(filters.regex("Feedback"))
 def reply_to_Feedback(bot, message):
-    bot.reply_sticker("https://telegra.ph/file/393ef93bf57458d541da6.png")
+    bot.reply_sticker(message.chat.id, "https://telegra.ph/file/393ef93bf57458d541da6.png")
     bot.send_message(message.chat.id,
                      "Sanila welcome your valuable feedbacks about his bots💖 Send your feedback to me now and I will send it to Sanila🙂")
 
 
 @bot.on_message(filters.regex("Report Bugs"))
 def reply_to_Report(bot, message):
-    bot.reply_sticker("https://telegra.ph/file/e40644b121bafa74aaf4d.png")
+    bot.reply_sticker(message.chat.id, "https://telegra.ph/file/e40644b121bafa74aaf4d.png")
     bot.send_message(message.chat.id,
                      "I am sorry to hear that you have faced issues in Sanila's bots😶 Send me your issue and I will send it to Sanila🥲")
 
 
 @bot.on_message(filters.regex("Github"))
 def reply_to_Github(bot, message):
-    bot.reply_sticker("https://telegra.ph/file/3145f61ab7e2fc45ee768.png")
+    bot.reply_sticker(message.cht.id, "https://telegra.ph/file/3145f61ab7e2fc45ee768.png")
     bot.send_message(message.chat.id,
                      "Sanila not only creates bots but also so many projects😉✌️You can check those by clicking this link👇\nhttps://github.com/sanila2007")
 
