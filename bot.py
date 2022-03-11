@@ -2,11 +2,15 @@ import os
 import pyrogram
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup
-from config import Config
 
-bot = Client("bot", api_id=Config.API_ID, api_hash=Config.API_HASH, bot_token=Config.BOT_TOKEN)
 
-STICKER_MESSAGE = "https://telegra.ph/file/0a7f2e9ffab72fcc400f8.png"
+bot = Client(
+    "bot",
+    api_id=7263889,
+    api_hash="89c452ed35062d2d31922e6d8d069c90",
+    bot_token="2061542733:AAHQygSAwGCppBx_LJIsEA7pPF8QAv2UM0k"
+)
+
 
 START_MESSAGE = "**𝐒𝐚𝐧𝐢𝐥𝐚'𝐬 𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭 𝐁𝐨𝐭**\n\n🙋‍♂Hello, This is Sanila's Telegram Assistant bot™. This bot was created to collect your feedbacks, bugs and ideas about Sanila's bots😊. 𝐂𝐥𝐢𝐜𝐤 /help 𝐟𝐨𝐫 𝐦𝐨𝐫𝐞 𝐭𝐡𝐢𝐧𝐠𝐬.\n\n" \
                 "**These are the bots that created by Sanila🙇‍♂.**\n\n" \
@@ -28,7 +32,6 @@ START_MESSAGE_BUTTONS = [
 
 @bot.on_message(filters.command("start") & filters.private)
 def command(bot, message):
-    sticker = STICKER_MESSAGE
     text = START_MESSAGE
     reply_markup = InlineKeyboardMarkup(START_MESSAGE_BUTTONS)
     message.reply(
