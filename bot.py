@@ -1,9 +1,3 @@
-# Copyright ©️ 2022 Sanila Ranatunga. All Rights Reserved
-# You are free to use this code in any of your project, but you MUST include the following in your README.md (Copy & paste)
-# ##Credits - [Sanila-Assistant-Bot] (https://github.com/sanila2007/Sanila-Assistant-Bot)
-
-# Changing the code is not allowed! Read GNU General Public License v3.0: https://github.com/sanila2007/Sanila-Assistant-Bot/blob/mai/LICENSE
-
 
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, ForceReply
@@ -11,12 +5,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyb
 from helper import buttons, messages
 from plugins import date_info, ratings
 
-bot = Client(
-    "bot",
-    api_id=7263889,
-    api_hash="89c452ed35062d2d31922e6d8d069c90",
-    bot_token="2031117879:AAG5kJt7xsyMkD8EPcep9TVjXyqoFcgcTiA"
-)
+# Errors available, don't fork
 
 
 # START MESSAGE
@@ -80,26 +69,7 @@ def reply_to_s_ong(bot, message):
     message.reply_chat_action("upload_photo")
     bot.send_photo(message.chat.id, "https://telegra.ph/file/e1c08af0c0e5f28053855.jpg", caption="<b>Step 2</b>")
     message.reply_chat_action("upload_photo")
-    bot.send_photo(message.chat.id, "https://telegra.ph/file/3fc72cf3f77f4e4c3d28f.jpg", caption="<b>Step 3</b>")
-
-
-# About bot section
-
-@bot.on_message(filters.regex("About Bot"))
-def reply_to_AboutBot(bot, message):
-    reply_markup = ReplyKeyboardMarkup(buttons.HOME_BUTTON_CR, resize_keyboard=True, one_time_keyboard=False)
-    bot.send_message(message.chat.id, "<ins>**About Bot**</ins>\n\n"
-                                      "Name: <a href=https://t.me/sanilaassistant_bot>Sanila's Assistant Bot ✨</a>\n\n"
-                                      "Created on: 11/21/2021🎂\n\n"
-                                      "Latest Version:  v0.7.3\n\n"
-                                      "Language: <a href=www.python.org>Python</a>\n\n"
-                                      "Framework: <a href=https://docs.pyrogram.org/>Pyrogram</a>\n\n"
-                                      "Server: <a href=https://heroku.com>Heroku</a>\n\n"
-                                      "Developer: <a href=https://github.com/sanila2007>Sanila Ranatunga\n\n</a>"
-                                      "Source: 🔓\n\n", disable_web_page_preview=True, reply_markup=reply_markup)
-
-
-# Contact section
+    bot.send_photo(message.chat.id, "https://telegra.ph/file/3fc72cf3f77f4e4c3d28f.jpg", caption="<b>Step 3</b>")# Contact section
 
 @bot.on_message(filters.regex("Contact 📞"))
 def reply_to_Contact(bot, message):
@@ -107,13 +77,6 @@ def reply_to_Contact(bot, message):
 
 
 # About Developer
-
-@bot.on_message(filters.regex("About Developer"))
-def reply_to_About(bot, message):
-    reply_markup = ReplyKeyboardMarkup(buttons.HOME_BUTTON_CR, resize_keyboard=True, one_time_keyboard=False)
-    bot.send_message(message.chat.id,
-                     "**<ins>About Developer</ins>**\n\n""❖ Name : ``Sanila Ranatunga😎``\n\n""❖ Age : 15 Years (2022) 🙃\n\n""❖ Birthday : 09.01.2007🎂\n\n""❖ From : Sri Lanka🇱🇰\n\n""❖ Skills : Programmer , Developer😏\n\n""❖ Ambition : Be a software engineer😊\n\n""❖ Languages : Python, HTML, CSS🙃\n\n❖ Still Learning : C++, JS, Java",
-                     reply_markup=reply_markup)
 
 
 # Home
