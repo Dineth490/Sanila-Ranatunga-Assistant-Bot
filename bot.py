@@ -281,6 +281,6 @@ def callback_query(Client, CallbackQuery):
         )
 
 
-print("Bot is alive📶✨")
+print("Not Wroking dont forkkkkk")
 
 bot.run()
